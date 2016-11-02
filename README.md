@@ -33,16 +33,18 @@ Extracting a zip format distribution:
 2. Click on the install new software option
 3. For older versions of eclipse paste the following url : http://findbugs.cs.umd.edu/eclipse . For higher versions e.g 4.6 use the following url: https://github.com/findbugsproject/findbugs/releases/tag/3.0.2_preview2 . Click add and follow the instructions to install the plugin. 
 
-#### Advantages :
+# Advantages :
 
 1. There isnt a steep learning curve when it comes to getting started with FindBugs. you just need to install the plugin and run Findbugs on the package/source code you want to analyze.
 2. Find Bugs offers granular control by providng us with include and exclude filters. The exclude filter as the name suggests can be used to exclude reporting of certain bugs.The include filter is used to report targetted bugs. Some bugs might not be relevant and if there's a consensus among the team as to which bugs to target during static analysis , the filters feature is very helpful 
 3. It is great in finding potential security, performance ans style errors. It provides suggestions for good practices like method naming guidelines to improve code readability and maintainability. It also captures security defects and performance issues such as invoking the constructors ineffciently.
 4. The fact that it runs on the bytecode makes it extremely efficient with respect to time taken to perform the analysis.
 
-#### Disadvantages :
+# Disadvantages :
 
 1. The issue highlighted by the tool may not always be intuitive and may require understanding on the part of the person performing the analysis. For eg: Incorrect lazy initilaztion and update of static field , might not be a very familiar to a person who comes from a functional progrmming background.
 2. There are always chances of false postives when it comes to static analysis tools. However based on research, Findbugs is known to produce the least false positives  as compared to other tools.
 3. FindBugs needs the compiled class file i.e bytecode to run the analysis.
+
+# Examples :
 
