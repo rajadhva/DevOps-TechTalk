@@ -110,3 +110,7 @@ Sometimes it happens that we are making certain changes to an existing an object
 # Final Verdict
 
 Static Analysis we feel forms an important part of the development process as it helps identify issues very early in the devlopment cycle. Also the best of developers can make silly mistakes , and hence a  tool like Find Bugs is perfect for identifying these. The ease of use along with the plugin architecture makes Find Bugs a good choice . Although false postives are certainly generated, the amount of them genrated is pretty less.Certain terminologies used like lay initializaton may not be common knowled and should have links detailing them. One additinal enhancement that can be made is to suggest changes along-with describing the bugs. Overall Find Bugs does a good job of performing Static Analysis.    
+
+# Demo Screencast
+
+https://www.youtube.com/watch?v=ghtFV3mquXo&feature=youtu.be&hd=1
