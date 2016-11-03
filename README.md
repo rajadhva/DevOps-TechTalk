@@ -4,8 +4,8 @@
 
 Team Members:
 ------
-- Akansha Chandre ()
-- Amruta Shintre ashintr)
+- Akansha Chandre (achand10)
+- Amruta Shintre (ashintr)
 - Vaibhav Rajadhyaksha (vrajadh)
 
 # Description
@@ -51,9 +51,14 @@ We can also configure the various settings by going into the properties tab . It
 
 ![Alt text](https://github.com/rajadhva/DevOps-TechTalk/blob/master/Screenshots/properties config.png)
 
+#### Filters:
+
+A filter tries to match for particular type of bug instances. Hence by defining a filter we can chose to select/ingnore certain types of bugs based on the general consensus for the project that we are working on. A filter file is an XML document with a top-level FindBugsFilter element which has some number of Match elements as children. We can include these filters by configuring the properties for Find Bugs. Example of a filter file has been added to the repository.
+
+
 # Examples :
 
-Following are some the bugs that were encountered as a result of running findbugs on the jav source code that has been added to this repository.
+Following are some the bugs that were encountered as a result of running findbugs on the java source code that has been added to this repository.
 
 1. Possible Null pointer dereference (Troubling , Normal Confidence):
 
@@ -69,6 +74,7 @@ A null pointer dereference takes place when a reference whihc is pointing to nul
 ```
 
 2. Comparision of String objects using == (Scary , High Confidence):
+
 The '==' operator checks whether the references pointing to the two objects are same whereas the .equals() method actually check if the content mathces and should be used incase of String comparisions.
 
 ```
@@ -101,3 +107,6 @@ Sometimes it happens that we are making certain changes to an existing an object
 2. There are always chances of false postives when it comes to static analysis tools. However based on research, Findbugs is known to produce the least false positives  as compared to other tools.
 3. FindBugs needs the compiled class file i.e bytecode to run the analysis.
 
+# Final Verdict
+
+Static Analysis we feel forms an important part of the development process as it helps identify issues very early in the devlopment cycle. Also the best of developers can make silly mistakes , and hence a  tool like Find Bugs is perfect for identifying these. The ease of use along with the plugin architecture makes Find Bugs a good choice . Although false postives are certainly generated, the amount of them genrated is pretty less.Certain terminologies used like lay initializaton may not be common knowled and should have links detailing them. One additinal enhancement that can be made is to suggest changes along-with describing the bugs. Overall Find Bugs does a good job of performing Static Analysis.    
