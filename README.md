@@ -37,7 +37,7 @@ Extracting a zip format distribution:
 
 After installing the plugin , we can simply go to the projects and run find bugs on the entire project folder, packages or individual source code files as depicted in the below screenshot.
 
-![Alt text](https://github.com/rajadhva/DevOps-TechTalk/blob/master/Screenshots/find_bugs_main)
+![Alt text](https://github.com/rajadhva/DevOps-TechTalk/blob/master/Screenshots/find_bugs_main.png)
 
 The Errors/Warnings that are found by the analysis can be opened in a separate perspective in eclipse as shown below. The warnings are classified into 4 separete types which are namely, scariest, scary, troubling and ofConcern. We cann double click on the type of warnign being thrown which takes us to the line of code where the issue exists.
 
@@ -52,6 +52,41 @@ We can also configure the various settings by going into the properties tab . It
 ![Alt text](https://github.com/rajadhva/DevOps-TechTalk/blob/master/Screenshots/properties config.png)
 
 # Examples :
+
+Following are some the bugs that were encountered as a result of running findbugs on the jav source code that has been added to this repository.
+
+1. Possible Null pointer dereference (Troubling , Normal Confidence):
+
+A null pointer dereference takes place when a reference whihc is pointing to null is being used as if it's valid . In the code snippet below we know can see that the String tempD is being fetched as a part of the method call and then directly being used to print the length. It is possible that a null value might be assigned to the String that will cause a null pointer exception.
+
+```
+    String tempD = FindbugsWarningsByExample4
+				.getSometimesNullValue_Notnull_MaybeNull_Annotation_CORRECT();
+		try {
+			// Next line should show NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE
+			System.out.println("   - " + tempD.length());
+
+```
+
+2. Comparision of String objects using == (Scary , High Confidence):
+The '==' operator checks whether the references pointing to the two objects are same whereas the .equals() method actually check if the content mathces and should be used incase of String comparisions.
+
+```
+
+    final String string1 = sb1.toString();
+		final String string2 = sb2.toString();
+		System.out.println("   - " + (string1 == string2));
+
+```
+3. Return value of method x ignored (Scariest , High Confidence):
+
+Sometimes it happens that we are making certain changes to an existing an object and a new object is being returned which we fail to assign and hence the changes are lost in the process . This usually is the case with Strings , which are immutable in java and any function called on it returns a new String. We can see something similar below , where the add operation returns a value which isn't being stored anywhere.
+
+```
+    private static void rvReturnValueIgnoredWRONG() {
+		final BigDecimal bigDecimal = BigDecimal.ONE;
+		bigDecimal.add(BigDecimal.ONE);
+```
 
 # Advantages :
 
