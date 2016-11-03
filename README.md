@@ -33,6 +33,22 @@ Extracting a zip format distribution:
 2. Click on the install new software option
 3. For older versions of eclipse paste the following url : http://findbugs.cs.umd.edu/eclipse . For higher versions e.g 4.6 use the following url: https://github.com/findbugsproject/findbugs/releases/tag/3.0.2_preview2 . Click add and follow the instructions to install the plugin. 
 
+# How it works
+
+After installing the plugin , we can simply go to the projects and run find bugs on the entire project folder, packages or individual source code files as depicted in the below screenshot.
+
+
+The Errors/Warnings that are found by the analysis can be opened in a separate perspective in eclipse as shown below. The warnings are classified into 4 separete types which are namely, scariest, scary, troubling and ofConcern. We cann double click on the type of warnign being thrown which takes us to the line of code where the issue exists.
+
+
+
+In the bottom pane we get a complete description of the type of bug along with an xml representation of the same which can be used to generate bug reports.
+
+
+We can also configure the various settings by going into the properties tab . It includes specifying include/exclude filter flies to include/exclude certain bug types. We can also determine the lowest level of warnings that we want to see low/medium/high. Also we can directly select/deselect certain bugs as a part of configuring it.
+
+# Examples :
+
 # Advantages :
 
 1. There isnt a steep learning curve when it comes to getting started with FindBugs. you just need to install the plugin and run Findbugs on the package/source code you want to analyze.
@@ -45,6 +61,4 @@ Extracting a zip format distribution:
 1. The issue highlighted by the tool may not always be intuitive and may require understanding on the part of the person performing the analysis. For eg: Incorrect lazy initilaztion and update of static field , might not be a very familiar to a person who comes from a functional progrmming background.
 2. There are always chances of false postives when it comes to static analysis tools. However based on research, Findbugs is known to produce the least false positives  as compared to other tools.
 3. FindBugs needs the compiled class file i.e bytecode to run the analysis.
-
-# Examples :
 
