@@ -37,15 +37,19 @@ Extracting a zip format distribution:
 
 After installing the plugin , we can simply go to the projects and run find bugs on the entire project folder, packages or individual source code files as depicted in the below screenshot.
 
+![Alt text](DevOps-TechTalk/Screenshots/find_bugs_main)
 
 The Errors/Warnings that are found by the analysis can be opened in a separate perspective in eclipse as shown below. The warnings are classified into 4 separete types which are namely, scariest, scary, troubling and ofConcern. We cann double click on the type of warnign being thrown which takes us to the line of code where the issue exists.
 
-
+![Alt text](https://github.com/rajadhva/DevOps-Hw2/blob/master/bug_types.png)
 
 In the bottom pane we get a complete description of the type of bug along with an xml representation of the same which can be used to generate bug reports.
 
+![Alt text](DevOps-TechTalk/Screenshots/bug_description.png)
 
 We can also configure the various settings by going into the properties tab . It includes specifying include/exclude filter flies to include/exclude certain bug types. We can also determine the lowest level of warnings that we want to see low/medium/high. Also we can directly select/deselect certain bugs as a part of configuring it.
+
+![Alt text](https://github.com/rajadhva/DevOps-Hw2/blob/master/properties config.png)
 
 # Examples :
 
